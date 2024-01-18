@@ -1,0 +1,97 @@
+@import './global.css';
+//colors are located in global.css files
+
+//add a google font. 
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: green;
+    img{
+        max-height:36px;
+    }
+}
+
+.navbar a{ 
+    margin: 1rem 2rem;
+    color: aliceblue;
+    text-decoration: none;    
+}
+
+.navbar a:hover{
+    color: aqua;
+}
+
+header .nav-btn{
+    padding:5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: antiquewhite;
+    visibility: hidden;
+    opacity: 0;
+}
+.navbar.responsive_nav{
+    align-items: baseline;
+    padding-top: 9rem;
+    text-align: left;
+    justify-content: start;
+}
+
+header .navbar { 
+    text-align: left;
+    justify-content: start;    
+    gap: 1.5rem;
+    transition: 1s;
+    height: 100%;  
+    top: 0;
+    z-index: 99999;
+    left: 0; 
+}
+
+@media screen and (max-width: 767px){
+    header .navbar{
+        width: 100% !important;
+    }
+}
+
+
+
+@media screen and (max-width: 1200px){
+    header .navbar{
+        width: 300px;
+        position: fixed;
+        align-items: baseline;
+        padding-top: 9rem;
+        transform: translateX(-100vw);
+        background-color: black;  
+    }
+
+    header .nav-btn{
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    header .responsive_nav{
+        transform: none;
+    }
+
+    .navbar .nav-close-btn{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    header a{
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+}
