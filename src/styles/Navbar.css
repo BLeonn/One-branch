@@ -1,4 +1,13 @@
 @import './global.css';
+:root {
+  --navbar-Ctransparent: rgba(0, 0, 0, 0.8);
+  --nav-text-color: rgba(255,255,255,.8);
+  --nav-text-selected: aqua;
+  --nav-btn: rgba(255,255,255,.8);
+  --nav-show-nav: rgba(0, 0, 0, 0.8);
+  --nav-primary-color:black;
+}
+
 @media screen and (max-width: 1200px) {
   header {
     display: flex;
@@ -6,8 +15,7 @@
     justify-content: space-between;
     height: 80px;
     padding: 0 2rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: green;
+    background-color: var(--navbar-Ctransparent);
   }
   header #dark-logo {
     display: none;
@@ -17,11 +25,11 @@
   }
   .navbar a {
     margin: 1rem 2rem;
-    color: aliceblue;
+    color: var(--nav-text-color);
     text-decoration: none;
   }
   .navbar a:hover {
-    color: aqua;
+    color: var(--nav-text-selected);
   }
   header .nav-btn {
     padding: 5px;
@@ -29,7 +37,7 @@
     background: transparent;
     border: none;
     outline: none;
-    color: antiquewhite;
+    color: var(--nav-btn);
     visibility: hidden;
     opacity: 0;
   }
@@ -55,7 +63,7 @@
     align-items: baseline;
     padding-top: 9rem;
     transform: translateX(-100vw);
-    background-color: black;
+    background-color: var(--nav-show-nav);
   }
   header .nav-btn {
     visibility: visible;
@@ -102,20 +110,19 @@
   header .navbar {
     padding-top: 0;
     padding-bottom: 0;
-    border: 1px solid black;
+    border: 1px solid var(--navbar-Ctransparent);
     justify-content: center;
   }
   header .navbar a {
     padding: 1.5em;
     text-decoration: none;
-    color: black;
+    color: var(--nav-primary-color);
     transition: 0.3s ease-in-out, color 0.3s ease-in-out;
   }
   header .navbar a:hover {
-    color: white;
-    background-color: black;
+    color: var(--nav-text-color);
+    background-color: var(--nav-primary-color);
     transition-delay: 0.1s;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    padding: 1.6em;
   }
 }/*# sourceMappingURL=Navbar.css.map */
