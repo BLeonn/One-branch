@@ -3,7 +3,7 @@ import {FaBars, FaTimes} from "react-icons/fa";
 import Logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
-
+import DarkLogo from '../assets/Dark-logo.png';
 
 function Navbar() {
   const navRef = useRef();
@@ -14,7 +14,8 @@ function Navbar() {
 
   return (
     <header>
-       <img src={Logo} alt="Logo"/>
+       <img src={Logo} alt="Logo" id='logo'/>
+       <img src={DarkLogo} alt='Logo' id='dark-logo'/>
       <div className='navbar' ref={navRef}>  
         {/* <div className='leftSide'>
             <img src={Logo} alt="Logo"/>
